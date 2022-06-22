@@ -13,6 +13,10 @@ const links = [
 		to: '/',
 		label: 'Регистрация',
 	},
+	{
+		to: '/dashboard',
+		label: 'Админка',
+	},
 ]
 
 const Drawer = ({ isOpen }) => {
