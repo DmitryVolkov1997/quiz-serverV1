@@ -8,6 +8,7 @@ import Dashboard from '../Dashboard/Dashboard'
 import SuccessLogin from '../SuccessLogin/SuccessLogin'
 import Bakalavriat from '../Bakalavriat/Bakalavriat'
 import Magistratura from '../Magistratura/Magistratura'
+import Doktorantura from '../Doktorantura/Doktorantura'
 
 function App() {
 	return (
@@ -23,6 +24,7 @@ function App() {
 					<Route path='/quiz-list' element={<QuizList />} />
 					<Route path='/quiz-list/bakalavriat' element={<Bakalavriat />} />
 					<Route path='/quiz-list/magistratura' element={<Magistratura />} />
+					<Route path='/quiz-list/doktorantura' element={<Doktorantura />} />
 				</Routes>
 			</Layout>
 		</div>

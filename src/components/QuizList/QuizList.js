@@ -147,6 +147,13 @@ const QuizList = () => {
 						<IoChevronForwardOutline className={'goTo'} />
 					</ListLink>
 				</ListItem>
+				<ListItem>
+					<ListLink to='/quiz-list/doktorantura'>
+						<IoSchoolOutline className={'img'} />
+						Докторантура
+						<IoChevronForwardOutline className={'goTo'} />
+					</ListLink>
+				</ListItem>
 				{/* <List>{loading ? <Loader /> : renderQuizes()}</List> */}
 			</Container>
 		</Wrapper>

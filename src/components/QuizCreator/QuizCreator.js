@@ -152,7 +152,6 @@ export default class QuizCreator extends Component {
 		this.setState({
 			quiz,
 			isFormValid: false,
-			rightAnswerId: 1,
 			formControls: createFormControls(),
 			category: '',
 		})
@@ -227,19 +226,17 @@ export default class QuizCreator extends Component {
 	}
 
 	handleInputValue = e => {
-		this.setState(
-			{
-				inputTitleValue: e.target.value,
-			},
-			() => this.onChangeTitle()
-		)
+		this.setState({
+			titles: e.target.value,
+		})
 	}
 
-	onChangeTitle = e => {
+	/* 	onChangeTitle = e => {
 		this.setState({
 			titles: this.state.inputTitleValue,
 		})
-	}
+	} */
+	// Были проблемы при вводе заголовка warning
 
 	onChangeActiveAdminPassword = password => {
 		this.setState({
@@ -266,8 +263,6 @@ export default class QuizCreator extends Component {
 	]
 
 	render() {
-		console.log(this.state.category)
-
 		return (
 			<>
 				{!this.state.showActiveAdminCreator ? (
@@ -283,7 +278,7 @@ export default class QuizCreator extends Component {
 								<div>
 									<Input
 										onChange={this.handleInputValue}
-										value={this.state.inputTitleValue}
+										value={this.state.titles}
 										label='Название предмета'
 									/>
 									{/* <Button style={{width: "100%", margin: "1rem 0 2rem"}}
@@ -299,7 +294,6 @@ export default class QuizCreator extends Component {
 								</div>
 								{this.renderControls()}
 								<CustomSelect
-									value={this.state.rightAnswerId}
 									options={options}
 									placeholder='Выберите правильный ответ'
 									onChange={e => this.setState({ rightAnswerId: +e.value })}
