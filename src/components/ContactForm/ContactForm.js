@@ -47,7 +47,6 @@ const MainTitle = styled.h1`
 	font-size: var(--fs-md);
 	font-weight: var(--fw-bold);
 	font-style: italic;
-	max-width: 1110px;
 	text-align: center;
 	border-bottom: 1px solid rgb(226, 232, 240);
 	padding-bottom: 2rem;
@@ -974,7 +973,7 @@ const ContactForm = () => {
 					<ButtonGroup>
 						<ButtonLink to='/quiz-list/bakalavriat'>Бакалавриат</ButtonLink>
 						<ButtonLink to='/quiz-list/magistratura'>Магистратура</ButtonLink>
-						<ButtonLink to='/quiz-list/bakalavriat'>Докторантура</ButtonLink>
+						<ButtonLink to='/quiz-list/doktorantura'>Докторантура</ButtonLink>
 						<ButtonLink to='/quiz-list/bakalavriat'>
 							Колледж инновационных технологий
 						</ButtonLink>
